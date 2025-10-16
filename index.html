@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لسان - ترجمة فورية</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">لسان</div>
+            <ul class="nav-links">
+                <!-- تم حذف جميع الروابط الإضافية -->
+            </ul>
+            <div class="auth-section">
+                <div id="g_id_onload"
+                     data-client_id="971327235087-gnvespnui0bvg0iaacv9qr1kingdj83r.apps.googleusercontent.com"
+                     data-callback="handleCredentialResponse"
+                     data-auto_select="true">
+                </div>
+                <div class="g_id_signin"
+                     data-type="standard"
+                     data-shape="pill"
+                     data-theme="outline"
+                     data-text="signin_with"
+                     data-size="large"
+                     data-logo_alignment="right">
+                </div>
+                <div id="user-profile" class="hidden">
+                    <img id="user-pic" src="" alt="User Picture">
+                    <span id="user-name"></span>
+                    <div class="dropdown-content">
+                        <a href="#" id="edit-name">تعديل الاسم</a>
+                        <a href="#" id="logout-btn">تسجيل الخروج</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="translation-mode-selector">
+            <button id="text-mode-btn" class="active">ترجمة نص</button>
+            <button id="code-mode-btn">ترجمة كود</button>
+        </div>
+
+        <div class="main-content">
+            <div class="translator-box">
+                <div class="box-header"><select id="source-lang"></select></div>
+                <div class="text-area-container">
+                    <textarea id="source-text" placeholder="اكتب النص هنا..."></textarea>
+                    <button class="control-button tts-button" id="source-tts-btn" title="استمع للنص"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg></button>
+                </div>
+            </div>
+
+            <button id="swap-languages" title="تبديل اللغات"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2.1l4 4-4 4"/><path d="M3 12.6v-2.6c0-2.2 1.8-4 4-4h14"/><path d="M7 21.9l-4-4 4-4"/><path d="M21 11.4v2.6c0 2.2-1.8 4-4 4H3"/></svg></button>
+
+            <div class="translator-box">
+                <div class="box-header"><select id="target-lang"></select></div>
+                <div class="text-area-container">
+                    <div id="target-text" class="output-box"></div>
+                    <div class="output-controls">
+                        <button class="control-button tts-button" id="target-tts-btn" title="استمع للترجمة"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg></button>
+                        <button class="control-button" id="copy-btn" title="نسخ الترجمة"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="translate-btn">ترجمة</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
